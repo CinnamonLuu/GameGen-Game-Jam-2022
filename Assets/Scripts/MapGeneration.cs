@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,89 +6,128 @@ public class MapGeneration : MonoBehaviour
 {
     private const int GridCols = 9;
     private const int GridRows = 8;
-    private GridCell[,] _grid = new GridCell[GridRows, GridCols];
+
+    private const int StartX = 3;
+    private const int StartY = 5;
     
-    private List<GridCell> open = new List<GridCell>();
+    private GridCell[,] _grid = new GridCell[GridRows, GridCols];
+    private List<Room>_nonOccupiedCells = new List<Room>();
+    private Room[,] _floor = new Room[GridRows, GridCols];
+
+    
+    private List<GridCell> _open = new List<GridCell>();
+    private List<Room> _endRooms = new List<Room>();
+    
+    //Special Rooms
+    private Room _bossRoom;
+    private Room _secretRoom;
+    private Room _treasureRoom;
 
     public int Level = 1;
     public GameObject a;
-
-    [SerializeField] private int _maxNumRooms => (int) (Random.Range(0, 2) + 5 + Level * 2.6);
-    private int exploredRooms = 0;
+    public GameObject b;
+    
+    
+    private int MaxNumRooms => (int) (Random.Range(0, 2) + 5 + Level * 2.6);
+    private int MinNumRooms => (int) (Random.Range(0, 2) + 5 + 1 * 2.6);
+    
+    private int _generatedRooms = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         //initialize map
-        int v = 1;
-        string line = "";
+
         for (int i = 0; i < GridRows; i++)
         {
             for (int j = 0; j < GridCols; j++)
             {
                 _grid[i, j] = new GridCell(i, j);
+                _nonOccupiedCells.Add(new Room(_grid[i, j], DistanceFromStart(i, j)));
 
-                line += (v.ToString() + ", ");
-                v++;
             }
-
-            v++;
-            line += "\n";
         }
 
 
-        expand(3, 5);
-        while (open.Count != 0)
+        Expand(StartX, StartY);
+        while (_open.Count != 0)
         {
             
-            int x = open[0].X;
-            int y = open[0].Y;
-            open.RemoveAt(0);
+            int x = _open[0].X;
+            int y = _open[0].Y;
+            _open.RemoveAt(0);
             bool created = false;
 
-            if (x > 1) created = created | expand(x - 1, y);
-            if (x < GridRows-1) created = created | expand(x + 1, y);
-            if (y > 2) created = created | expand(x, y - 1);
-            if (y < GridCols-1) created = created | expand(x, y + 1);
+            if (x > 1) created = created | Expand(x - 1, y);
+            if (x < GridRows-1) created = created | Expand(x + 1, y);
+            if (y > 2) created = created | Expand(x, y - 1);
+            if (y < GridCols-1) created = created | Expand(x, y + 1);
 
+            if (!created)
+                _endRooms.Add(_floor[x,y]);
 
         }
-        //Debug.Log(line);
+        _endRooms.Sort((a,b) => a.DistanceFromStart.CompareTo(b.DistanceFromStart));
+
+
+        _bossRoom = _endRooms[_endRooms.Count - 1];
+        _bossRoom.IsBossRoom = true;
+        GameObject boss = Instantiate(b, new Vector3(_bossRoom.LocationInMap.X, 1, _bossRoom.LocationInMap.Y), Quaternion.identity);
+        boss.GetComponent<MeshRenderer>().material.color = Color.red;
+
+
+        _treasureRoom = _endRooms[_endRooms.Count - 2];
+        _treasureRoom.IsTreasureRoom = true;
+        GameObject treasure = Instantiate(b, new Vector3(_treasureRoom.LocationInMap.X, 1, _treasureRoom.LocationInMap.Y), Quaternion.identity);
+        treasure.GetComponent<MeshRenderer>().material.color = Color.yellow;
+
+
+
     }
 
-    private bool expand(int x, int y)
+    private bool Expand(int x, int y)
     {
         if (_grid[x, y].IsExplored)
             return false;
 
-        int neighboursExplored = getNeighbours(x, y);
+        int neighboursCreated = GetCreatedNeighbours(x, y);
 
-        if (neighboursExplored > 1)
+        if (neighboursCreated > 1)
             return false;
         
-        if(exploredRooms >= _maxNumRooms)
+        if(_generatedRooms >= MaxNumRooms)
             return false;
-        float b = Random.Range(0, 2);
-        if (b < 0.5f && (x != 3 && y != 5))
+        
+        //Random chance to create a room, besides the initial room that will always generate
+        if (Random.Range(0, 2) < 0.5f && (x != 3 && y != 5))
         {
-            Debug.Log(b);
             return false;
         }
-        Debug.Log(b);
+
         
-        open.Add(_grid[x, y]);
+        _open.Add(_grid[x, y]);
         _grid[x, y].IsExplored = true;
-        exploredRooms += 1;
+
+        Room room = _nonOccupiedCells.Find(room => (room.LocationInMap.X == x && room.LocationInMap.Y == y));
+        _floor[x, y] = room;
+        _nonOccupiedCells.Remove(room);
+
+        _generatedRooms += 1;
 
         Instantiate(a, new Vector3(x, 0, y), Quaternion.identity);
 
         return true;
     }
 
-    private int getNeighbours(int x, int y)
+    private int DistanceFromStart(int x, int y)
+    {
+        return Mathf.Abs(StartX - x) + Mathf.Abs(StartY - y);
+    }
+
+    private int GetCreatedNeighbours(int x, int y)
     {
         GridCell[] neighbours = new GridCell[4];
-        GridCell currentCell = neighbours[0] = _grid[x, y];
+        GridCell currentCell = _grid[x, y];
 
         neighbours[0] = (currentCell.X > 0) ? _grid[x - 1, y] : null;
         neighbours[1] = (currentCell.Y > 0) ? _grid[x, y - 1] : null;
@@ -110,8 +146,31 @@ public class MapGeneration : MonoBehaviour
         return anyExplored;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            PlaceRoom();
+        }
+    }
+
+    private void PlaceRoom()
+    {
+
+        //Calculate numNeighbours for each created room
+        foreach (Room room in _nonOccupiedCells)
+        {
+            room.NumNeighbours = GetCreatedNeighbours(room.LocationInMap.X, room.LocationInMap.Y);
+        }
+
+        _nonOccupiedCells.Sort((a, b) => b.NumNeighbours.CompareTo(a.NumNeighbours));
+
+        int posX = _nonOccupiedCells[0].LocationInMap.X, posY = _nonOccupiedCells[0].LocationInMap.Y;
+
+        _floor[posX, posY] = new Room(_grid[posX, posY], DistanceFromStart(posX, posY));
+        _secretRoom = _floor[posX, posY];
+        _secretRoom.IsSecretRoom = true;
+        GameObject treasure = Instantiate(a, new Vector3(posX, 0f, posY), Quaternion.identity);
+        treasure.GetComponent<MeshRenderer>().material.color = Color.green;
     }
 }
