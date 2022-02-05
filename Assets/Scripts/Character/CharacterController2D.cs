@@ -12,13 +12,17 @@ public class CharacterController2D : MonoBehaviour
 
     [SerializeField]
     private float m_characterVelocity = 0.03f;
-    [SerializeField]
-    private float m_dashCooldown;
+    //[SerializeField]
+    private float m_dashCooldown = 5f;
+    private float dashDuration = 0.2f;
 
     private float m_timeSienceLastDash = 0;
     [SerializeField]
-    private int m_DashMultiplier;
+    private float m_DashMultiplier;
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
+
+    private bool inDash;
+    private Vector3 goalPosition;
 
 
 
@@ -31,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         m_timeSienceLastDash += Time.deltaTime;
 
         Vector3 mousePos = Input.mousePosition;
@@ -46,12 +51,12 @@ public class CharacterController2D : MonoBehaviour
                 if (mousePos.x > 0.1)
                 {
 
-                    m_spriteRenderer.sprite = characterSprites[2];
+                    m_spriteRenderer.sprite = characterSprites[3];
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
-                    m_spriteRenderer.sprite = characterSprites[3];
+                    m_spriteRenderer.sprite = characterSprites[2];
                 }
             }
         }
@@ -64,46 +69,61 @@ public class CharacterController2D : MonoBehaviour
                 if (mousePos.x > 0.1)
                 {
 
-                    m_spriteRenderer.sprite = characterSprites[2];
+                    m_spriteRenderer.sprite = characterSprites[3];
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
-                    m_spriteRenderer.sprite = characterSprites[3];
+                    m_spriteRenderer.sprite = characterSprites[2];
                 }
             }
         }
+        if (!inDash)
+        {
+            Debug.Log("me muevo");
+            Vector3 vectorToAdd = new Vector3();
+            if (Input.GetKey(KeyCode.W))
+            {
+                vectorToAdd.z += 1f;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                vectorToAdd.z -= 1f;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                vectorToAdd.x += 1f;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                vectorToAdd.x -= 1f;
+            }
 
-        Vector3 vectorToAdd = new Vector3();
-        if (Input.GetKey(KeyCode.W))
-        {
-            vectorToAdd.z -= 1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            vectorToAdd.z += 1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            vectorToAdd.x -= 1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            vectorToAdd.x += 1f;
-        }
+            vectorToAdd.Normalize();
 
-        vectorToAdd.Normalize();
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
+            {
+                inDash = true;
+                goalPosition = transform.position + (vectorToAdd * m_dashVelocity);
+                m_timeSienceLastDash = 0;
+                Debug.Log("dash");
+            }
+            else
+            {
 
-        if ((Input.GetKey(KeyCode.LeftShift)|| Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
-        {
-            vectorToAdd *= m_dashVelocity;
-            m_timeSienceLastDash = 0;
+                vectorToAdd *= m_characterVelocity;
+                transform.position += vectorToAdd;
+            }
         }
         else
         {
-
-            vectorToAdd *= m_characterVelocity;
+            Debug.Log(m_timeSienceLastDash);
+            transform.position = Vector3.Lerp(transform.position, goalPosition, m_timeSienceLastDash / dashDuration);
+            if (m_timeSienceLastDash >= dashDuration)
+            {
+                inDash = false;
+            }
         }
-        transform.position += vectorToAdd;
+
     }
 }
