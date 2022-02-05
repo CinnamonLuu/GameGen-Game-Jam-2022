@@ -70,12 +70,15 @@ public class MapGeneration : MonoBehaviour
         _endRooms.Sort((a,b) => a.DistanceFromStart.CompareTo(b.DistanceFromStart));
 
 
+        //Set treasure room 
+        //TODO: move to PlaceRoom(BOOS_ROOM, Position)
         _bossRoom = _endRooms[_endRooms.Count - 1];
         _bossRoom.IsBossRoom = true;
         GameObject boss = Instantiate(b, new Vector3(_bossRoom.LocationInMap.X, 1, _bossRoom.LocationInMap.Y), Quaternion.identity);
         boss.GetComponent<MeshRenderer>().material.color = Color.red;
 
-
+        //Set treasure room 
+        //TODO: move to PlaceRoom(TREASURE_ROOM, Position)
         _treasureRoom = _endRooms[_endRooms.Count - 2];
         _treasureRoom.IsTreasureRoom = true;
         GameObject treasure = Instantiate(b, new Vector3(_treasureRoom.LocationInMap.X, 1, _treasureRoom.LocationInMap.Y), Quaternion.identity);
