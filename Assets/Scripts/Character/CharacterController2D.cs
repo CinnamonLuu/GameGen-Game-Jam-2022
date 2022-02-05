@@ -1,0 +1,109 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(SpriteRenderer))]
+public class CharacterController2D : MonoBehaviour
+{
+    [SerializeField]
+    private SpriteRenderer m_spriteRenderer;
+    [SerializeField]
+    private Sprite[] characterSprites;
+
+    [SerializeField]
+    private float m_characterVelocity = 0.03f;
+    [SerializeField]
+    private float m_dashCooldown;
+
+    private float m_timeSienceLastDash = 0;
+    [SerializeField]
+    private int m_DashMultiplier;
+    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
+
+
+
+    void Start()
+    {
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_spriteRenderer.sprite = characterSprites[0];
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        m_timeSienceLastDash += Time.deltaTime;
+
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        mousePos.Normalize();
+        if (mousePos.y > 0.1)
+        {
+            m_spriteRenderer.sprite = characterSprites[0];
+            if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
+            {
+                if (mousePos.x > 0.1)
+                {
+
+                    m_spriteRenderer.sprite = characterSprites[2];
+                }
+                else if (mousePos.x <= -0.1)
+                {
+
+                    m_spriteRenderer.sprite = characterSprites[3];
+                }
+            }
+        }
+        else if (mousePos.y <= -0.1)
+        {
+            m_spriteRenderer.sprite = characterSprites[1];
+            if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
+            {
+
+                if (mousePos.x > 0.1)
+                {
+
+                    m_spriteRenderer.sprite = characterSprites[2];
+                }
+                else if (mousePos.x <= -0.1)
+                {
+
+                    m_spriteRenderer.sprite = characterSprites[3];
+                }
+            }
+        }
+
+        Vector3 vectorToAdd = new Vector3();
+        if (Input.GetKey(KeyCode.W))
+        {
+            vectorToAdd.z -= 1f;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            vectorToAdd.z += 1f;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            vectorToAdd.x -= 1f;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            vectorToAdd.x += 1f;
+        }
+
+        vectorToAdd.Normalize();
+
+        if ((Input.GetKey(KeyCode.LeftShift)|| Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
+        {
+            vectorToAdd *= m_dashVelocity;
+            m_timeSienceLastDash = 0;
+        }
+        else
+        {
+
+            vectorToAdd *= m_characterVelocity;
+        }
+        transform.position += vectorToAdd;
+    }
+}
