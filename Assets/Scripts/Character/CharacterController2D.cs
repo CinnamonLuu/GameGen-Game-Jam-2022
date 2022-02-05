@@ -9,6 +9,19 @@ public class CharacterController2D : MonoBehaviour
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
     private Sprite[] characterSprites;
+
+    [SerializeField]
+    private float m_characterVelocity = 0.03f;
+    [SerializeField]
+    private float m_dashCooldown;
+
+    private float m_timeSienceLastDash = 0;
+    [SerializeField]
+    private int m_DashMultiplier;
+    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
+
+
+
     void Start()
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
@@ -18,6 +31,8 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_timeSienceLastDash += Time.deltaTime;
+
         Vector3 mousePos = Input.mousePosition;
         Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
         mousePos.x = mousePos.x - objectPos.x;
@@ -45,7 +60,7 @@ public class CharacterController2D : MonoBehaviour
             m_spriteRenderer.sprite = characterSprites[1];
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
-                
+
                 if (mousePos.x > 0.1)
                 {
 
@@ -77,6 +92,18 @@ public class CharacterController2D : MonoBehaviour
             vectorToAdd.x += 1f;
         }
 
-        transform.position += vectorToAdd.normalized * 0.03f;
+        vectorToAdd.Normalize();
+
+        if ((Input.GetKey(KeyCode.LeftShift)|| Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
+        {
+            vectorToAdd *= m_dashVelocity;
+            m_timeSienceLastDash = 0;
+        }
+        else
+        {
+
+            vectorToAdd *= m_characterVelocity;
+        }
+        transform.position += vectorToAdd;
     }
 }
