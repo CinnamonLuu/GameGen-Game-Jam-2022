@@ -6,13 +6,19 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
 
-    public const int RoomRows = 14;
-    public const int RoomCols = 8;
+    private const int roomRows = 14;
+    private const int roomCols = 8;
+    
+    private const int cellSize = 10;
+    public static int RoomRows => roomRows;
+    public static int RoomCols => roomCols;
+    public static int CellSize  => cellSize;
 
-    public int cellSize = 100;
-    public GridCell LocationInMap { get; }
+    public GridCell LocationInMap;
 
     public GridCell[,] _grid = new GridCell[RoomRows, RoomCols];
+
+    public PerlinNoiseMap perlin;
 
     public int DistanceFromStart { get; }
     public int NumNeighbours { get; set; }
@@ -21,15 +27,12 @@ public class Room : MonoBehaviour
     public bool IsSecretRoom;
     public bool IsTreasureRoom;
 
-
-    public Room(GridCell cell)
+    private void Start()
     {
-        LocationInMap = cell;
-    }
-    public Room(GridCell cell, int distance)
-    {
-        LocationInMap = cell;
-        DistanceFromStart = distance;
+        //perlin = GetComponent<PerlinNoiseMap>();
+        perlin.XOffset = (LocationInMap.X * cellSize) + Random.Range(0,100);
+        perlin.YOffset = LocationInMap.Y * cellSize + Random.Range(0, 100);
+        
     }
 
     private void OnDrawGizmos()
@@ -38,7 +41,7 @@ public class Room : MonoBehaviour
         {
             for (int j = 0; j < RoomCols; j++)
             {
-                Handles.Label(transform.position + new Vector3(i * cellSize + cellSize/2, j * cellSize + cellSize / 2, 0), i + "," + j);
+                Handles.Label(transform.position + new Vector3(i * CellSize + CellSize/2, j * CellSize + CellSize / 2, 0), i + "," + j);
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9122238826115447791}
   - component: {fileID: 6448104257399017253}
   - component: {fileID: 5673920944234115864}
+  - component: {fileID: 873565879905270399}
   m_Layer: 0
   m_Name: PnatillaDungeoBase
   m_TagString: Untagged
@@ -94,7 +95,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb0fe8441ec67b4c854ef26aed932db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellSize: 10
   IsBossRoom: 0
   IsSecretRoom: 0
   IsTreasureRoom: 0
+--- !u!114 &873565879905270399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790907344393105136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9e0a078cc14b140a0828bfcd747795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementsInPerlin:
+  - {fileID: 2824570696820180711, guid: 062d6f3370db277438e4e23b0cdc2fc3, type: 3}
+  - {fileID: 5140367684078968510, guid: ac14663959dce8946839da94945ddcdd, type: 3}
+  - {fileID: 4101783990016328178, guid: 3875cc1e1eda4c4419bf3084e97f34c8, type: 3}
+  _magnification: 7
+  _xOffset: 0
+  _yOffset: 0
