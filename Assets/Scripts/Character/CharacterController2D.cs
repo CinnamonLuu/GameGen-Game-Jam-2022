@@ -26,11 +26,18 @@ public class CharacterController2D : MonoBehaviour
 
     public Rigidbody2D Body;
 
+    
+    public Animator animator;
+
 
 
     void Start()
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+        animator.SetBool("Backward",true);
+        animator.SetBool("Forward",false);
+        animator.SetBool("Left",false);
+        animator.SetBool("Right",false);
         m_spriteRenderer.sprite = characterSprites[0];
     }
 
@@ -47,35 +54,55 @@ public class CharacterController2D : MonoBehaviour
         mousePos.Normalize();
         if (mousePos.y > 0.1)
         {
+            animator.SetBool("Backward",true);
+            animator.SetBool("Forward",false);
+            animator.SetBool("Left",false);
+            animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[0];
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",false);
+                    animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
                 }
                 else if (mousePos.x <= -0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",true);
+                    animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
                 }
             }
         }
         else if (mousePos.y <= -0.1)
         {
+            animator.SetBool("Backward",false);
+            animator.SetBool("Forward",true);
+            animator.SetBool("Left",false);
+            animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[1];
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
 
                 if (mousePos.x > 0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",false);
+                    animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
                 }
                 else if (mousePos.x <= -0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",true);
+                    animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
                 }
             }
@@ -110,6 +137,7 @@ public class CharacterController2D : MonoBehaviour
                 //goalPosition = transform.position + (Vector3.zero * m_dashVelocity);
                 m_timeSienceLastDash = 0;
                 Debug.Log("dash");
+                animator.SetBool("Dash",true);
             }
             else
             {
@@ -117,6 +145,14 @@ public class CharacterController2D : MonoBehaviour
                 vectorToAdd *= m_characterVelocity;
                 //transform.position += vectorToAdd;
                 Body.velocity = vectorToAdd;
+
+                if(Body.velocity[0] == 0f && Body.velocity[1] == 0f)
+                {
+                    animator.SetBool("Quieto",true);
+                }else{
+                    animator.SetBool("Quieto",false);
+                }
+                
             }
         }
         else
@@ -126,6 +162,7 @@ public class CharacterController2D : MonoBehaviour
             if (m_timeSienceLastDash >= dashDuration)
             {
                 inDash = false;
+                animator.SetBool("Dash",false);
             }
         }
 
