@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    Stat health;
+    [SerializeField]
+    protected Stat health;
+    [SerializeField]
+    protected Stat moveSpeed;
+
+    [SerializeField]
+    private SpriteRenderer m_spriteRenderer;
+    [SerializeField]
+    private Sprite[] characterSprites;
 
     public void TakeDamage(float damageAmount)
     {

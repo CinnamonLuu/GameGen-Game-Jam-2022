@@ -91,11 +91,11 @@ public class CharacterController2D : MonoBehaviour
             Vector3 vectorToAdd = new Vector3();
             if (Input.GetKey(KeyCode.W))
             {
-                vectorToAdd.z += 1f;
+                vectorToAdd.y += 1f;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                vectorToAdd.z -= 1f;
+                vectorToAdd.y -= 1f;
             }
             if (Input.GetKey(KeyCode.D))
             {
