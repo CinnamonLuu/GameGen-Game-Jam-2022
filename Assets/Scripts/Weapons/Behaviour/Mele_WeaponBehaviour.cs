@@ -6,7 +6,14 @@ public class Mele_WeaponBehaviour : Base_WeaponBehaviour
 {
     Mele_WeaponConfiguration weaponConfiguration;
     LayerMask m_enemiesLayer = 6;
-    private float areaTomakeDamage = 4f;
+    private float areaTomakeDamage = 8f;
+
+    public override void SetConfiguration(Base_WeaponConfiguration configuration)
+    {
+        weaponConfiguration = (Mele_WeaponConfiguration)configuration;
+    }
+
+
     public override void Attack()
     {
         //animacion
@@ -18,11 +25,20 @@ public class Mele_WeaponBehaviour : Base_WeaponBehaviour
 
     private void MakeDamage()
     {
-        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position + gameObject.transform.forward * (areaTomakeDamage / 2f), new Vector3(areaTomakeDamage / 2f, 1, areaTomakeDamage / 2f), Quaternion.identity, m_enemiesLayer);
+        Collider[] hitColliders = Physics.OverlapSphere(m_character.transform.position, areaTomakeDamage);
+        Debug.Log(hitColliders.Length);
         for (int i = 0; i < hitColliders.Length; i++)
         {
             Enemy enemy = hitColliders[i].gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(weaponConfiguration.GetDamageAmount());
+            if (enemy != null)
+            {
+                Vector3 vectorToEnemy = enemy.transform.position - m_character.transform.position;
+                float s = Vector2.Dot(new Vector2(vectorToEnemy.x, vectorToEnemy.y), new Vector2(m_character.characterForward.x, m_character.characterForward.y));
+                if (s > 0)
+                {
+                    enemy.TakeDamage(weaponConfiguration.GetDamageAmount());
+                }
+            }
         }
     }
 }

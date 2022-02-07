@@ -11,6 +11,8 @@ public class CharacterController2D : MonoBehaviour
 
     [Header("Weapon")]
     [SerializeField]
+    private Base_WeaponConfiguration m_weaponConfiguration;
+    [SerializeField]
     private Base_WeaponBehaviour m_weapon;
 
     [Header("Sprites")]
@@ -18,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
     private Sprite[] characterSprites;
+
     [Header("Movement variables")]
     [SerializeField]
     private float m_characterVelocity = 0.03f;
@@ -43,6 +46,9 @@ public class CharacterController2D : MonoBehaviour
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = characterSprites[0];
+        m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
+        m_weapon.SetCharacter(this);
+        characterForward = transform.up;
     }
 
     void Update()
@@ -57,35 +63,40 @@ public class CharacterController2D : MonoBehaviour
         if (mousePos.y > 0.1)
         {
             m_spriteRenderer.sprite = characterSprites[0];
+            characterForward = transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
         else if (mousePos.y <= -0.1)
         {
             m_spriteRenderer.sprite = characterSprites[1];
+            characterForward = -transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
-
                 if (mousePos.x > 0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
@@ -104,6 +115,7 @@ public class CharacterController2D : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 vectorToAdd.x += 1f;
+
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -124,7 +136,6 @@ public class CharacterController2D : MonoBehaviour
             {
 
                 vectorToAdd *= m_characterVelocity;
-                //transform.position += vectorToAdd;
                 Body.velocity = vectorToAdd;
             }
         }
@@ -138,10 +149,16 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Attack();
+        }
+
     }
 
     public void Attack()
     {
+        Debug.Log("ataco");
         if (m_weapon != null)
         {
             m_weapon.Attack();
@@ -160,5 +177,10 @@ public class CharacterController2D : MonoBehaviour
     public void Die()
     {
         //finish game
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 8);
     }
 }
