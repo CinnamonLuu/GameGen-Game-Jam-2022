@@ -5,11 +5,23 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class CharacterController2D : MonoBehaviour
 {
+    [Header("Stats")]
+    [SerializeField]
+    private Stat health;
+
+    [Header("Weapon")]
+    [SerializeField]
+    private Base_WeaponConfiguration m_weaponConfiguration;
+    [SerializeField]
+    private Base_WeaponBehaviour m_weapon;
+
+    [Header("Sprites")]
     [SerializeField]
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
     private Sprite[] characterSprites;
 
+    [Header("Movement variables")]
     [SerializeField]
     private float m_characterVelocity = 0.03f;
     //[SerializeField]
@@ -19,12 +31,16 @@ public class CharacterController2D : MonoBehaviour
     private float m_timeSienceLastDash = 0;
     [SerializeField]
     private float m_DashMultiplier;
-    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
 
     private bool inDash;
     private Vector3 goalPosition;
 
+    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
+    public float Health => health.amount;
     public Rigidbody2D Body;
+    public Localization localization;
+
+    public Vector3 characterForward;
 
     
     public Animator animator;
@@ -39,12 +55,13 @@ public class CharacterController2D : MonoBehaviour
         animator.SetBool("Left",false);
         animator.SetBool("Right",false);
         m_spriteRenderer.sprite = characterSprites[0];
+        m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
+        m_weapon.SetCharacter(this);
+        characterForward = transform.up;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
         m_timeSienceLastDash += Time.deltaTime;
 
         Vector3 mousePos = Input.mousePosition;
@@ -59,6 +76,7 @@ public class CharacterController2D : MonoBehaviour
             animator.SetBool("Left",false);
             animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[0];
+            characterForward = transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
@@ -68,6 +86,7 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Left",false);
                     animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
@@ -76,6 +95,7 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Left",true);
                     animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
@@ -86,9 +106,9 @@ public class CharacterController2D : MonoBehaviour
             animator.SetBool("Left",false);
             animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[1];
+            characterForward = -transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
-
                 if (mousePos.x > 0.1)
                 {
                     animator.SetBool("Backward",false);
@@ -96,6 +116,7 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Left",false);
                     animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
@@ -104,6 +125,7 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Left",true);
                     animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
@@ -122,6 +144,7 @@ public class CharacterController2D : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 vectorToAdd.x += 1f;
+
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -143,7 +166,6 @@ public class CharacterController2D : MonoBehaviour
             {
 
                 vectorToAdd *= m_characterVelocity;
-                //transform.position += vectorToAdd;
                 Body.velocity = vectorToAdd;
 
                 if(Body.velocity[0] == 0f && Body.velocity[1] == 0f)
@@ -166,5 +188,38 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Attack();
+        }
+
+    }
+
+    public void Attack()
+    {
+        Debug.Log("ataco");
+        if (m_weapon != null)
+        {
+            m_weapon.Attack();
+        }
+    }
+
+    public void GetDamage(float amount)
+    {
+        health.amount -= amount;
+        if (health.amount <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        //finish game
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 8);
     }
 }
