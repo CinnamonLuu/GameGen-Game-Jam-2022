@@ -8,7 +8,8 @@ public enum StatType
     Damage,
     AttackSpeed,
     ProjectileNumber,
-    MovementSpeed
+    MovementSpeed,
+    Range
 }
 [System.Serializable]
 public class Stat

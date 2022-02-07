@@ -29,15 +29,13 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField]
     private float m_DashMultiplier;
 
-
-    private float dashDuration = 0.2f;
-    private float m_timeSienceLastDash = 0f;
     private bool inDash;
     private Vector3 goalPosition;
 
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
     public float Health => health.amount;
     public Rigidbody2D Body;
+    public Localization localization;
 
 
 

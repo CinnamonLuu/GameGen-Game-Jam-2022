@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
-    public GameObject player;
+    public CharacterController2D player;
+    public int cellSize = 10;
 
     private void Awake()
     {

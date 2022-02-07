@@ -5,15 +5,17 @@ using UnityEngine;
 public class MeleeEnemy : Enemy
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        transform.position += (GameManager.instance.player.transform.position - transform.position) * moveSpeed.amount * Time.deltaTime ;
+        base.Update();
+
+        Vector3 direction = (player.gameObject.transform.position - transform.position).normalized;
+        if(!(Vector3.Distance(GameManager.instance.player.transform.position, transform.position) > range.amount* GameManager.instance.cellSize))
+        {
+            //Attack
+            return;
+        }
+        _body.velocity = direction * moveSpeed.amount ;
     }
 }
