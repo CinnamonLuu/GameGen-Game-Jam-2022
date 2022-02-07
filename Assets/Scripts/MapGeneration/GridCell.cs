@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class GridCell
 {
-    public int X { get; }
+    [field: SerializeField]
+    public int X;
 
-    public int Y { get; }
+    [field: SerializeField]
+    public int Y;
 
     public bool IsExplored { get; set; } = false;
 

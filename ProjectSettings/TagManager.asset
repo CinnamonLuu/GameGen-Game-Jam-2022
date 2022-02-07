@@ -15,8 +15,8 @@ TagManager:
   - Player
   - 
   - 
-  - 
-  - 
+  - Rooms
+  - Walkable
   - RoomObstacle
   - 
   - 

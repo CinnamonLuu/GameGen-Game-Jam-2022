@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class MapGeneration : MonoBehaviour
 {
 
-    public GameObject a;
+    public GameObject prefab;
 
 
     private const int GridCols = 9;
@@ -41,7 +41,7 @@ public class MapGeneration : MonoBehaviour
     void Start()
     {
 
-        BaseRoomSize = new Vector2(a.GetComponent<Renderer>().bounds.size.x, a.GetComponent<Renderer>().bounds.size.y);
+        BaseRoomSize = new Vector2(prefab.GetComponent<Renderer>().bounds.size.x, prefab.GetComponent<Renderer>().bounds.size.y);
         //initialize map
 
         for (int i = 0; i < GridRows; i++)
@@ -80,14 +80,14 @@ public class MapGeneration : MonoBehaviour
         //TODO: move to PlaceRoom(BOOS_ROOM, Position)
         _bossRoom = _endRooms[_endRooms.Count - 1];
         _bossRoom.IsBossRoom = true;
-        GameObject boss = Instantiate(a, new Vector3(_bossRoom.LocationInMap.X * BaseRoomSize.x, _bossRoom.LocationInMap.Y * BaseRoomSize.y, -1), a.transform.rotation);
+        GameObject boss = Instantiate(prefab, new Vector3(_bossRoom.LocationInMap.X * BaseRoomSize.x, _bossRoom.LocationInMap.Y * BaseRoomSize.y, -1), prefab.transform.rotation);
         boss.GetComponent<MeshRenderer>().material.color = Color.red;
 
         //Set treasure room 
         //TODO: move to PlaceRoom(TREASURE_ROOM, Position)
         _treasureRoom = _endRooms[_endRooms.Count - 2];
         _treasureRoom.IsTreasureRoom = true;
-        GameObject treasure = Instantiate(a, new Vector3(_treasureRoom.LocationInMap.X * BaseRoomSize.x, _treasureRoom.LocationInMap.Y * BaseRoomSize.y, -1), a.transform.rotation);
+        GameObject treasure = Instantiate(prefab, new Vector3(_treasureRoom.LocationInMap.X * BaseRoomSize.x, _treasureRoom.LocationInMap.Y * BaseRoomSize.y, -1), prefab.transform.rotation);
         treasure.GetComponent<MeshRenderer>().material.color = Color.yellow;
 
 
@@ -117,14 +117,15 @@ public class MapGeneration : MonoBehaviour
         _open.Add(_grid[x, y]);
         _grid[x, y].IsExplored = true;
 
-        DungeonRoom room = _nonOccupiedCells.Find(room => (room.LocationInMap.X == x && room.LocationInMap.Y == y));
-        _floor[x, y] = room;
-        _nonOccupiedCells.Remove(room);
+        DungeonRoom dungeonRoom = _nonOccupiedCells.Find(room => (room.LocationInMap.X == x && room.LocationInMap.Y == y));
+        _floor[x, y] = dungeonRoom;
+        _nonOccupiedCells.Remove(dungeonRoom);
 
         _generatedRooms += 1;
 
-        Instantiate(a, new Vector3(x * BaseRoomSize.x, y * BaseRoomSize.y, 0f), a.transform.rotation);
-
+        Instantiate(prefab, new Vector3(x * BaseRoomSize.x, y * BaseRoomSize.y, 0f), prefab.transform.rotation).GetComponent<Room>().LocationInMap = _grid[x,y];
+        
+  
         return true;
     }
 
@@ -179,7 +180,7 @@ public class MapGeneration : MonoBehaviour
         _floor[posX, posY] = new DungeonRoom(_grid[posX, posY], DistanceFromStart(posX, posY));
         _secretRoom = _floor[posX, posY];
         _secretRoom.IsSecretRoom = true;
-        GameObject treasure = Instantiate(a, new Vector3(posX * BaseRoomSize.x, posY * BaseRoomSize.y, -1f), a.transform.rotation);
+        GameObject treasure = Instantiate(prefab, new Vector3(posX * BaseRoomSize.x, posY * BaseRoomSize.y, -1f), prefab.transform.rotation);
         treasure.GetComponent<MeshRenderer>().material.color = Color.green;
     }
 }
