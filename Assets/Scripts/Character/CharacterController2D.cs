@@ -34,6 +34,7 @@ public class CharacterController2D : MonoBehaviour
 
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
     public float Health => health.amount;
+    public Rigidbody2D Body;
 
     void Start()
     {
@@ -91,11 +92,11 @@ public class CharacterController2D : MonoBehaviour
             Vector3 vectorToAdd = new Vector3();
             if (Input.GetKey(KeyCode.W))
             {
-                vectorToAdd.z += 1f;
+                vectorToAdd.y += 1f;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                vectorToAdd.z -= 1f;
+                vectorToAdd.y -= 1f;
             }
             if (Input.GetKey(KeyCode.D))
             {
@@ -119,7 +120,8 @@ public class CharacterController2D : MonoBehaviour
             {
 
                 vectorToAdd *= m_characterVelocity;
-                transform.position += vectorToAdd;
+                //transform.position += vectorToAdd;
+                Body.velocity = vectorToAdd;
             }
         }
         else
