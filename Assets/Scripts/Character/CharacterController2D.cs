@@ -11,6 +11,8 @@ public class CharacterController2D : MonoBehaviour
 
     [Header("Weapon")]
     [SerializeField]
+    private Base_WeaponConfiguration m_weaponConfiguration;
+    [SerializeField]
     private Base_WeaponBehaviour m_weapon;
 
     [Header("Sprites")]
@@ -18,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
     private Sprite[] characterSprites;
+
     [Header("Movement variables")]
     [SerializeField]
     private float m_characterVelocity = 0.03f;
@@ -26,11 +29,13 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField]
     private float m_DashMultiplier;
 
-
+    //Dash variables
     private float dashDuration = 0.2f;
     private float m_timeSienceLastDash = 0f;
     private bool inDash;
     private Vector3 goalPosition;
+
+    public Vector3 characterForward;
 
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
     public float Health => health.amount;
@@ -40,6 +45,9 @@ public class CharacterController2D : MonoBehaviour
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = characterSprites[0];
+        m_weapon=m_weaponConfiguration.InstantiateWeaponBehaviour();
+        m_weapon.SetCharacter(this);
+        characterForward = transform.up;
     }
 
     void Update()
@@ -96,15 +104,24 @@ public class CharacterController2D : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.S))
             {
+                vectorToAdd.y -= 1f;y
+                vectorToAdd.y += 1f;
+                characterForward = transform.up;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
                 vectorToAdd.y -= 1f;
+                characterForward = -transform.up;y
             }
             if (Input.GetKey(KeyCode.D))
             {
                 vectorToAdd.x += 1f;
+                characterForward = transform.right;
             }
             if (Input.GetKey(KeyCode.A))
             {
                 vectorToAdd.x -= 1f;
+                characterForward = transform.right;
             }
 
             vectorToAdd.Normalize();
@@ -134,10 +151,16 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Attack();
+        }
+
     }
 
     public void Attack()
     {
+        Debug.Log("ataco");
         if (m_weapon != null)
         {
             m_weapon.Attack();
@@ -156,5 +179,10 @@ public class CharacterController2D : MonoBehaviour
     public void Die()
     {
         //finish game
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 3);
     }
 }

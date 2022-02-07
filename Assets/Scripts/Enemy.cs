@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
     Stat health;
 
     public void TakeDamage(float damageAmount)

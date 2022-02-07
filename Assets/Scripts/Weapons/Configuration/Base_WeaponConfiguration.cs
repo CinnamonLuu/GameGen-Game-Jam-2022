@@ -2,10 +2,17 @@ using UnityEngine;
 
 public class Base_WeaponConfiguration : ScriptableObject
 {
+    [SerializeField]
     private Stat damage;
+    [SerializeField]
     private Stat attackSpeed;
 
     public Upgrade[] upgrades;
+
+    public virtual Base_WeaponBehaviour InstantiateWeaponBehaviour()
+    {
+        return null;
+    }
 
     public float GetDamageAmount()
     {
