@@ -5,26 +5,35 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class CharacterController2D : MonoBehaviour
 {
+    [Header("Stats")]
+    [SerializeField]
+    private Stat health;
+
+    [Header("Weapon")]
+    [SerializeField]
+    private Base_WeaponBehaviour m_weapon;
+
+    [Header("Sprites")]
     [SerializeField]
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
     private Sprite[] characterSprites;
-
+    [Header("Movement variables")]
     [SerializeField]
     private float m_characterVelocity = 0.03f;
-    //[SerializeField]
+    [SerializeField]
     private float m_dashCooldown = 5f;
-    private float dashDuration = 0.2f;
-
-    private float m_timeSienceLastDash = 0;
     [SerializeField]
     private float m_DashMultiplier;
-    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
 
+
+    private float dashDuration = 0.2f;
+    private float m_timeSienceLastDash = 0f;
     private bool inDash;
     private Vector3 goalPosition;
 
-
+    private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
+    public float Health => health.amount;
 
     void Start()
     {
@@ -32,10 +41,8 @@ public class CharacterController2D : MonoBehaviour
         m_spriteRenderer.sprite = characterSprites[0];
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
         m_timeSienceLastDash += Time.deltaTime;
 
         Vector3 mousePos = Input.mousePosition;
@@ -125,5 +132,27 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
+    }
+
+    public void Attack()
+    {
+        if (m_weapon != null)
+        {
+            m_weapon.Attack();
+        }
+    }
+
+    public void GetDamage(float amount)
+    {
+        health.amount -= amount;
+        if (health.amount <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        //finish game
     }
 }

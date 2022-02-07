@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class Upgrade : ScriptableObject
 {
-    public enum UpgradeType
-    {
-        Attack,
-        AttackSpeed,
-        ProjectileNumber,
-        Life
-    }
-
-    public UpgradeType upgradeType;
-    public bool sum;
-    public int amount;
+    public StatType upgradeType;
+    public float amount;
 }
