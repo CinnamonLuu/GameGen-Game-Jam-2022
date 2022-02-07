@@ -13,7 +13,6 @@ public class PerlinNoiseMap : MonoBehaviour
 
     int[,] _noiseGrid;
     GameObject[,] _tileGrid;
-    public Room parentRoom;
 
     [SerializeField,Range(4f,20f)]
     float _magnification = 7f;
@@ -57,7 +56,7 @@ public class PerlinNoiseMap : MonoBehaviour
         GameObject tile = Instantiate(tilePrefab, tileGroup.transform);
 
         tile.name = string.Format("tile: x{0} y{1}", x, y);
-        tile.transform.localPosition = new Vector3(x, y, -0.1f) * Room.CellSize;
+        tile.transform.localPosition = new Vector3(x, y, 0) * Room.CellSize + new Vector3(Room.CellSize / 2, Room.CellSize / 2) ;
 
         _tileGrid[x, y] = tile;
 

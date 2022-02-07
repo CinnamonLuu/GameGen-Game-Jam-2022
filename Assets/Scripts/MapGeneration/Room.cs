@@ -32,7 +32,7 @@ public class Room : MonoBehaviour
         //perlin = GetComponent<PerlinNoiseMap>();
         perlin.XOffset = (LocationInMap.X * cellSize) + Random.Range(0,100);
         perlin.YOffset = LocationInMap.Y * cellSize + Random.Range(0, 100);
-        
+
     }
 
     private void OnDrawGizmos()
