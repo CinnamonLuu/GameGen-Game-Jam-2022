@@ -25,7 +25,7 @@ public class Mele_WeaponBehaviour : Base_WeaponBehaviour
 
     private void MakeDamage()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(m_character.transform.position, areaTomakeDamage);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(m_character.transform.position, areaTomakeDamage, 1<<LayerMask.NameToLayer("Enemies"));
         Debug.Log(hitColliders.Length);
         for (int i = 0; i < hitColliders.Length; i++)
         {

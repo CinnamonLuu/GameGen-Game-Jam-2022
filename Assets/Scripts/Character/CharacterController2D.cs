@@ -40,6 +40,8 @@ public class CharacterController2D : MonoBehaviour
     public Rigidbody2D Body;
     public Localization localization;
 
+    public Vector3 characterForward;
+
 
 
     void Start()

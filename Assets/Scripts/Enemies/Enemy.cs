@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
 
     protected CharacterController2D player;
 
+    public Vector2 characterForward;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +36,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (localization.room != player.localization.room)
-        {
-            _body.velocity = Vector2.zero;
-            return;
-        }
+        
+
+
     }
     public void TakeDamage(float damageAmount)
     {
@@ -52,6 +52,6 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         //drop object random
-        Destroy(this);
+        Destroy(gameObject);
     }
 }
