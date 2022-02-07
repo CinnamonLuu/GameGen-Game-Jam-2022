@@ -19,6 +19,6 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         //drop object random
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }

@@ -45,7 +45,7 @@ public class CharacterController2D : MonoBehaviour
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_spriteRenderer.sprite = characterSprites[0];
-        m_weapon=m_weaponConfiguration.InstantiateWeaponBehaviour();
+        m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
         m_weapon.SetCharacter(this);
         characterForward = transform.up;
     }
@@ -62,35 +62,40 @@ public class CharacterController2D : MonoBehaviour
         if (mousePos.y > 0.1)
         {
             m_spriteRenderer.sprite = characterSprites[0];
+            characterForward = transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
         else if (mousePos.y <= -0.1)
         {
             m_spriteRenderer.sprite = characterSprites[1];
+            characterForward = -transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
-
                 if (mousePos.x > 0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[3];
+                    characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
 
                     m_spriteRenderer.sprite = characterSprites[2];
+                    characterForward = -transform.right;
                 }
             }
         }
@@ -104,24 +109,16 @@ public class CharacterController2D : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.S))
             {
-                vectorToAdd.y -= 1f;y
-                vectorToAdd.y += 1f;
-                characterForward = transform.up;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
                 vectorToAdd.y -= 1f;
-                characterForward = -transform.up;y
             }
             if (Input.GetKey(KeyCode.D))
             {
                 vectorToAdd.x += 1f;
-                characterForward = transform.right;
+
             }
             if (Input.GetKey(KeyCode.A))
             {
                 vectorToAdd.x -= 1f;
-                characterForward = transform.right;
             }
 
             vectorToAdd.Normalize();
@@ -137,7 +134,6 @@ public class CharacterController2D : MonoBehaviour
             {
 
                 vectorToAdd *= m_characterVelocity;
-                //transform.position += vectorToAdd;
                 Body.velocity = vectorToAdd;
             }
         }
@@ -183,6 +179,6 @@ public class CharacterController2D : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, 3);
+        Gizmos.DrawWireSphere(transform.position, 8);
     }
 }

@@ -6,7 +6,7 @@ public class Mele_WeaponBehaviour : Base_WeaponBehaviour
 {
     Mele_WeaponConfiguration weaponConfiguration;
     LayerMask m_enemiesLayer = 6;
-    private float areaTomakeDamage = 2f;
+    private float areaTomakeDamage = 8f;
 
     public override void SetConfiguration(Base_WeaponConfiguration configuration)
     {
@@ -32,7 +32,8 @@ public class Mele_WeaponBehaviour : Base_WeaponBehaviour
             Enemy enemy = hitColliders[i].gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
-                float s = Vector3.Dot((m_character.transform.position-enemy.transform.position).normalized,m_character.characterForward);
+                Vector3 vectorToEnemy = enemy.transform.position - m_character.transform.position;
+                float s = Vector2.Dot(new Vector2(vectorToEnemy.x, vectorToEnemy.y), new Vector2(m_character.characterForward.x, m_character.characterForward.y));
                 if (s > 0)
                 {
                     enemy.TakeDamage(weaponConfiguration.GetDamageAmount());
