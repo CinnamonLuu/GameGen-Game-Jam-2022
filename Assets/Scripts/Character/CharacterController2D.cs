@@ -21,8 +21,11 @@ public class CharacterController2D : MonoBehaviour
     [Header("Movement variables")]
     [SerializeField]
     private float m_characterVelocity = 0.03f;
-    [SerializeField]
-    private float m_dashCooldown = 5f;
+    //[SerializeField]
+    public float m_dashCooldown = 5f;
+    private float dashDuration = 0.2f;
+
+    private float m_timeSienceLastDash = 0;
     [SerializeField]
     private float m_DashMultiplier;
 
@@ -34,6 +37,9 @@ public class CharacterController2D : MonoBehaviour
 
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
     public float Health => health.amount;
+    public Rigidbody2D Body;
+
+
 
     void Start()
     {
@@ -111,7 +117,8 @@ public class CharacterController2D : MonoBehaviour
             if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
             {
                 inDash = true;
-                goalPosition = transform.position + (vectorToAdd * m_dashVelocity);
+                Body.velocity = vectorToAdd * m_dashVelocity;
+                //goalPosition = transform.position + (Vector3.zero * m_dashVelocity);
                 m_timeSienceLastDash = 0;
                 Debug.Log("dash");
             }
@@ -119,13 +126,14 @@ public class CharacterController2D : MonoBehaviour
             {
 
                 vectorToAdd *= m_characterVelocity;
-                transform.position += vectorToAdd;
+                //transform.position += vectorToAdd;
+                Body.velocity = vectorToAdd;
             }
         }
         else
         {
             Debug.Log(m_timeSienceLastDash);
-            transform.position = Vector3.Lerp(transform.position, goalPosition, m_timeSienceLastDash / dashDuration);
+            //transform.position = Vector3.Lerp(transform.position, goalPosition, m_timeSienceLastDash / dashDuration);
             if (m_timeSienceLastDash >= dashDuration)
             {
                 inDash = false;

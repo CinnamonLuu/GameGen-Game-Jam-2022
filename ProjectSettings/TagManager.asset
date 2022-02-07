@@ -13,11 +13,12 @@ TagManager:
   - UI
   - Enemies
   - 
+  - Player
   - 
   - 
-  - 
-  - 
-  - 
+  - Rooms
+  - Walkable
+  - RoomObstacle
   - 
   - 
   - 
