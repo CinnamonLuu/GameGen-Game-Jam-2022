@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     protected Stat moveSpeed;
     [SerializeField]
     protected Stat range;
+    [SerializeField]
+    protected Stat attackSpeed;
 
     [SerializeField]
     protected Rigidbody2D _body;
@@ -27,10 +29,17 @@ public class Enemy : MonoBehaviour
 
     public Vector2 characterForward;
 
+    //Attack related
+    [SerializeField]
+    protected Base_WeaponConfiguration m_weaponConfiguration;
+    [SerializeField]
+    protected Base_WeaponBehaviour m_weapon;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager.instance.player;
+        m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
     }
 
 

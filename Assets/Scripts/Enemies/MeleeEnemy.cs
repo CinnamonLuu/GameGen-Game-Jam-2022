@@ -26,6 +26,7 @@ public class MeleeEnemy : Enemy
         if(!(Vector3.Distance(GameManager.instance.player.transform.position, transform.position) > range.amount* GameManager.instance.cellSize))
         {
             //Attack
+            m_weapon.Attack();
             return;
         }
         _body.velocity = direction * moveSpeed.amount ;

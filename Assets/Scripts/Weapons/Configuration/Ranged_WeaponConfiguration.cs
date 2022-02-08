@@ -8,9 +8,11 @@ public class Ranged_WeaponConfiguration : Base_WeaponConfiguration
     public Stat projectileSpeed;
     public Stat numberOfProjectile;
 
-    public Ranged_WeaponBehaviour InstantiateRangedWeaponBehaviour()
+    public override Base_WeaponBehaviour InstantiateWeaponBehaviour()
     {
-        return null;
+        Ranged_WeaponBehaviour newBehaviour = new Ranged_WeaponBehaviour();
+        newBehaviour.SetConfiguration(this);
+        return newBehaviour;
     }
 
     public float GetProjectileAmount()
