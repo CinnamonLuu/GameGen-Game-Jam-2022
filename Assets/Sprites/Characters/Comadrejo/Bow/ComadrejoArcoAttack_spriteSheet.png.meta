@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: ab72c542919b5b54a9fb1fedfa42bad4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8826802331360546423
+    second: ComadrejoArcoAttack_spriteSheet_0
+  - first:
+      213: -5978009219142591709
+    second: ComadrejoArcoAttack_spriteSheet_1
+  - first:
+      213: 2750108486286908007
+    second: ComadrejoArcoAttack_spriteSheet_2
+  - first:
+      213: -3908075549410912801
+    second: ComadrejoArcoAttack_spriteSheet_3
+  - first:
+      213: 601690665351532820
+    second: ComadrejoArcoAttack_spriteSheet_5
+  - first:
+      213: -5989777616821493164
+    second: ComadrejoArcoAttack_spriteSheet_6
+  - first:
+      213: -3508698522243600517
+    second: ComadrejoArcoAttack_spriteSheet_7
+  - first:
+      213: 6807769258852598119
+    second: ComadrejoArcoAttack_spriteSheet_8
+  - first:
+      213: -1376709941750500560
+    second: ComadrejoArcoAttack_spriteSheet_9
+  - first:
+      213: -1927661000393530353
+    second: ComadrejoArcoAttack_spriteSheet_11
+  - first:
+      213: 3528958796069446611
+    second: ComadrejoArcoAttack_spriteSheet_18
+  - first:
+      213: 4617002392311415994
+    second: ComadrejoArcoAttack_spriteSheet_19
+  - first:
+      213: -1496101090605162234
+    second: ComadrejoArcoAttack_spriteSheet_20
+  - first:
+      213: 6129200261831938709
+    second: ComadrejoArcoAttack_spriteSheet_22
+  - first:
+      213: -8790020222563559637
+    second: ComadrejoArcoAttack_spriteSheet_23
+  - first:
+      213: 7261022043236269859
+    second: ComadrejoArcoAttack_spriteSheet_30
+  - first:
+      213: -8424845791540068230
+    second: ComadrejoArcoAttack_spriteSheet_35
+  - first:
+      213: -363201461075271256
+    second: ComadrejoArcoAttack_spriteSheet_36
+  - first:
+      213: 385035371819617347
+    second: ComadrejoArcoAttack_spriteSheet_37
+  - first:
+      213: 8602627076553119570
+    second: ComadrejoArcoAttack_spriteSheet_38
+  - first:
+      213: 9090997803089615444
+    second: ComadrejoArcoAttack_spriteSheet_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4908
+        width: 1223
+        height: 1015
+      alignment: 9
+      pivot: {x: 0.44, y: 0.11157683}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ec55734f91f7a70800000000000000
+      internalID: 8826802331360546423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4907
+        width: 1157
+        height: 969
+      alignment: 9
+      pivot: {x: 0.44, y: 0.12829855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bdefcb948d90da0800000000000000
+      internalID: -5978009219142591709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 4902
+        width: 1223
+        height: 1015
+      alignment: 9
+      pivot: {x: 0.44, y: 0.10198632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a1beaf8195a2620800000000000000
+      internalID: 2750108486286908007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 4129
+        y: 4740
+        width: 1223
+        height: 1177
+      alignment: 9
+      pivot: {x: 0.44, y: 0.23533954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd519f16ef9b3c9c0800000000000000
+      internalID: -3908075549410912801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 5497
+        y: 4902
+        width: 1223
+        height: 1015
+      alignment: 9
+      pivot: {x: 0.44, y: 0.11637209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41152f4e872a95800800000000000000
+      internalID: 601690665351532820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 3237
+        width: 1251
+        height: 1239
+      alignment: 9
+      pivot: {x: 0.43774864, y: 0.067876615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452e4c12ef800eca0800000000000000
+      internalID: -5989777616821493164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 3242
+        width: 1290
+        height: 1231
+      alignment: 9
+      pivot: {x: 0.44340366, y: 0.06111429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f6bbda8499e4fc0800000000000000
+      internalID: -3508698522243600517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 3230
+        width: 1418
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.39359275, y: 0.07198215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761cbb2621e0a7e50800000000000000
+      internalID: 6807769258852598119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 4629
+        y: 3242
+        width: 1538
+        height: 1239
+      alignment: 9
+      pivot: {x: 0.36075443, y: 0.07180493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03376332a91f4ece0800000000000000
+      internalID: -1376709941750500560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 6385
+        y: 3242
+        width: 1251
+        height: 1239
+      alignment: 9
+      pivot: {x: 0.43385798, y: 0.063948095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f046b2888829f35e0800000000000000
+      internalID: -1927661000393530353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1694
+        width: 1254
+        height: 1238
+      alignment: 9
+      pivot: {x: 0.5465769, y: 0.07145896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3a5bae35169f030800000000000000
+      internalID: 3528958796069446611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1694
+        width: 1290
+        height: 1234
+      alignment: 9
+      pivot: {x: 0.55659634, y: 0.06612561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4c9d0c633e21040800000000000000
+      internalID: 4617002392311415994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 1690
+        width: 1418
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.6029752, y: 0.07198215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601a76a1cf7cc3be0800000000000000
+      internalID: -1496101090605162234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 4619
+        y: 1694
+        width: 1538
+        height: 1238
+      alignment: 9
+      pivot: {x: 0.6360816, y: 0.07539055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59259bb0a2b4f0550800000000000000
+      internalID: 6129200261831938709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 6388
+        y: 1699
+        width: 1250
+        height: 1238
+      alignment: 9
+      pivot: {x: 0.55451405, y: 0.067527466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b275999dd23930680800000000000000
+      internalID: -8790020222563559637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 3613
+        y: 65
+        width: 1242
+        height: 1406
+      alignment: 9
+      pivot: {x: 0.44, y: 0.2230564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ff069e31554c460800000000000000
+      internalID: 7261022043236269859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 65
+        width: 1225
+        height: 1316
+      alignment: 9
+      pivot: {x: 0.4483472, y: 0.25959456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a704fcba36fe41b80800000000000000
+      internalID: -8424845791540068230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 75
+        width: 1278
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.4239084, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cc44371abe75500800000000000000
+      internalID: 385035371819617347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 5173
+        y: 65
+        width: 1223
+        height: 1485
+      alignment: 9
+      pivot: {x: 0.444, y: 0.21484601}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2571b195fbba26770800000000000000
+      internalID: 8602627076553119570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoArcoAttack_spriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 6677
+        y: 65
+        width: 1223
+        height: 1315
+      alignment: 9
+      pivot: {x: 0.4399993, y: 0.24544005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a5303f556b92e70800000000000000
+      internalID: 9090997803089615444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3265621d9a7f8c249ad7492143139771
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

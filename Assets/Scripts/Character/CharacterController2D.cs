@@ -42,11 +42,19 @@ public class CharacterController2D : MonoBehaviour
 
     public Vector3 characterForward;
 
+    
+    public Animator animator;
+
 
 
     void Start()
     {
+        
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+        animator.SetBool("Backward",true);
+        animator.SetBool("Forward",false);
+        animator.SetBool("Left",false);
+        animator.SetBool("Right",false);
         m_spriteRenderer.sprite = characterSprites[0];
         m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
         m_weapon.SetCharacter(this);
@@ -55,6 +63,13 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("Attack",false);
+        animator.SetBool("Sword",false);
+        animator.SetBool("Shield",false);
+        animator.SetBool("Bow",false);
+
+         animator.SetBool("Damage",false);
+
         m_timeSienceLastDash += Time.deltaTime;
 
         Vector3 mousePos = Input.mousePosition;
@@ -64,19 +79,29 @@ public class CharacterController2D : MonoBehaviour
         mousePos.Normalize();
         if (mousePos.y > 0.1)
         {
+            animator.SetBool("Backward",true);
+            animator.SetBool("Forward",false);
+            animator.SetBool("Left",false);
+            animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[0];
             characterForward = transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",false);
+                    animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
                     characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",true);
+                    animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
                     characterForward = -transform.right;
                 }
@@ -84,19 +109,29 @@ public class CharacterController2D : MonoBehaviour
         }
         else if (mousePos.y <= -0.1)
         {
+            animator.SetBool("Backward",false);
+            animator.SetBool("Forward",true);
+            animator.SetBool("Left",false);
+            animator.SetBool("Right",false);
             m_spriteRenderer.sprite = characterSprites[1];
             characterForward = -transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",false);
+                    animator.SetBool("Right",true);
                     m_spriteRenderer.sprite = characterSprites[3];
                     characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
-
+                    animator.SetBool("Backward",false);
+                    animator.SetBool("Forward",false);
+                    animator.SetBool("Left",true);
+                    animator.SetBool("Right",false);
                     m_spriteRenderer.sprite = characterSprites[2];
                     characterForward = -transform.right;
                 }
@@ -133,12 +168,21 @@ public class CharacterController2D : MonoBehaviour
                 //goalPosition = transform.position + (Vector3.zero * m_dashVelocity);
                 m_timeSienceLastDash = 0;
                 Debug.Log("dash");
+                animator.SetBool("Dash",true);
             }
             else
             {
 
                 vectorToAdd *= m_characterVelocity;
                 Body.velocity = vectorToAdd;
+
+                if(Body.velocity[0] == 0f && Body.velocity[1] == 0f)
+                {
+                    animator.SetBool("Quieto",true);
+                }else{
+                    animator.SetBool("Quieto",false);
+                }
+                
             }
         }
         else
@@ -148,6 +192,7 @@ public class CharacterController2D : MonoBehaviour
             if (m_timeSienceLastDash >= dashDuration)
             {
                 inDash = false;
+                animator.SetBool("Dash",false);
             }
         }
 
@@ -163,13 +208,17 @@ public class CharacterController2D : MonoBehaviour
         Debug.Log("ataco");
         if (m_weapon != null)
         {
+            animator.SetBool("Attack",true);
             m_weapon.Attack();
+            
+            animator.SetBool("Sword",true);
         }
     }
 
     public void GetDamage(float amount)
     {
         health.amount -= amount;
+        animator.SetBool("Damage",true);
         if (health.amount <= 0)
         {
             Die();
