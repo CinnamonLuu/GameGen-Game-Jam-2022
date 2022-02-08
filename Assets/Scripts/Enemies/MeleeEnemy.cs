@@ -10,6 +10,7 @@ public class MeleeEnemy : Enemy
     private void Update()
     {
         combatConfiguration.animator.SetBool("Attack",false);
+        //combatConfiguration.animator.SetBool("Damage",false);
 
         combatConfiguration.Elapsed += Time.deltaTime;
         if (localization.room != player.localization.room)

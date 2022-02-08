@@ -54,7 +54,7 @@ public class CombatConfiguration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        animator.SetBool("Damage", false);
     }
 
 
@@ -63,10 +63,13 @@ public class CombatConfiguration : MonoBehaviour
     {
         health.amount -= damageAmount;
         animator.SetBool("Damage", true);
+
         if (health.amount <= 0)
         {
+            
             Die();
         }
+        
     }
 
     public void Die()
