@@ -30,7 +30,7 @@ public class CameraBehaviour : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float percentage = elapsedTime / transitionDuration;
             //Debug.Log(string.Format("{0}/{1} = {2}", elapsedTime, transitionDuration, percentage));
-            Vector3 destination = playerLocation.room.gameObject.transform.GetChild(0).position + new Vector3(0, 0, -80);
+            Vector3 destination = playerLocation.room.gameObject.transform.GetChild(0).position + new Vector3(0, 0, -125);
             mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position,
                 destination,
                 curve.Evaluate(percentage));
