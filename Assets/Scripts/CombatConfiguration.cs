@@ -74,7 +74,10 @@ public class CombatConfiguration : MonoBehaviour
 
     public void Die()
     {
+        animator.SetBool("Death", true);
+        
         //drop object random
         Destroy(gameObject);
     }
+
 }
