@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: ead7de8d0d66df442a8cf76aa8509401
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -941391410968535676
+    second: ComadrejoEspadaMelee2_spriteSheet_0
+  - first:
+      213: -8632402782501747464
+    second: ComadrejoEspadaMelee2_spriteSheet_1
+  - first:
+      213: -4714477996445370557
+    second: ComadrejoEspadaMelee2_spriteSheet_4
+  - first:
+      213: 4685976416306230462
+    second: ComadrejoEspadaMelee2_spriteSheet_5
+  - first:
+      213: 2697872160133753264
+    second: ComadrejoEspadaMelee2_spriteSheet_9
+  - first:
+      213: 7834009993715652006
+    second: ComadrejoEspadaMelee2_spriteSheet_2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee2_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 419
+        width: 1016
+        height: 1083
+      alignment: 9
+      pivot: {x: 0.34994277, y: 0.03963126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ddd9adf718fe2f0800000000000000
+      internalID: -941391410968535676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee2_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 31
+        width: 2076
+        height: 1471
+      alignment: 9
+      pivot: {x: 0.73619384, y: 0.27870908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4c3eed76b833880800000000000000
+      internalID: -8632402782501747464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee2_spriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 4112
+        y: 62
+        width: 2232
+        height: 1474
+      alignment: 9
+      pivot: {x: 0.7510693, y: 0.2679778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3477a789d3fc29eb0800000000000000
+      internalID: -4714477996445370557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee2_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 6518
+        y: 70
+        width: 2398
+        height: 1472
+      alignment: 9
+      pivot: {x: 0.76805544, y: 0.26206404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb47ac729bee70140800000000000000
+      internalID: 4685976416306230462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee2_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 7742
+        y: 69
+        width: 1171
+        height: 1476
+      alignment: 9
+      pivot: {x: 0.52463174, y: 0.25991723}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5184a359ef7bc60800000000000000
+      internalID: 7834009993715652006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e2d04329880bd18408020cec32a371f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

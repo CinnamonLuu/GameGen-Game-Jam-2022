@@ -1,0 +1,1089 @@
+fileFormatVersion: 2
+guid: 74650bf00ef6ab943acdb11797c4930b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6316182347854536875
+    second: EnemigoRango_spriteSheet_0
+  - first:
+      213: 8319182031793497497
+    second: EnemigoRango_spriteSheet_1
+  - first:
+      213: -4806946036006379659
+    second: EnemigoRango_spriteSheet_2
+  - first:
+      213: 3512757416544703832
+    second: EnemigoRango_spriteSheet_3
+  - first:
+      213: 7127251217461867326
+    second: EnemigoRango_spriteSheet_4
+  - first:
+      213: -6859076547458125680
+    second: EnemigoRango_spriteSheet_5
+  - first:
+      213: -4251259257727288179
+    second: EnemigoRango_spriteSheet_6
+  - first:
+      213: -1137292010708039586
+    second: EnemigoRango_spriteSheet_7
+  - first:
+      213: 1601147766239079045
+    second: EnemigoRango_spriteSheet_8
+  - first:
+      213: -1437268668094989873
+    second: EnemigoRango_spriteSheet_9
+  - first:
+      213: -59601608603020583
+    second: EnemigoRango_spriteSheet_10
+  - first:
+      213: -3994816702695762547
+    second: EnemigoRango_spriteSheet_11
+  - first:
+      213: -6710569651334454995
+    second: EnemigoRango_spriteSheet_12
+  - first:
+      213: 3046734401264460912
+    second: EnemigoRango_spriteSheet_13
+  - first:
+      213: -6949847380916996940
+    second: EnemigoRango_spriteSheet_14
+  - first:
+      213: -3841016218774500394
+    second: EnemigoRango_spriteSheet_15
+  - first:
+      213: -4625036826592112783
+    second: EnemigoRango_spriteSheet_16
+  - first:
+      213: 1487783842458942095
+    second: EnemigoRango_spriteSheet_17
+  - first:
+      213: -6318809222117399249
+    second: EnemigoRango_spriteSheet_18
+  - first:
+      213: 5718557731412894265
+    second: EnemigoRango_spriteSheet_19
+  - first:
+      213: -2132635070682672807
+    second: EnemigoRango_spriteSheet_20
+  - first:
+      213: -996816915970464497
+    second: EnemigoRango_spriteSheet_21
+  - first:
+      213: 5125396234112272207
+    second: EnemigoRango_spriteSheet_22
+  - first:
+      213: 2301525810473580114
+    second: EnemigoRango_spriteSheet_23
+  - first:
+      213: 6218879194045277503
+    second: EnemigoRango_spriteSheet_24
+  - first:
+      213: 271406690933472692
+    second: EnemigoRango_spriteSheet_25
+  - first:
+      213: 5905654431670311665
+    second: EnemigoRango_spriteSheet_26
+  - first:
+      213: 8655777436180649802
+    second: EnemigoRango_spriteSheet_27
+  - first:
+      213: -3498166073329385577
+    second: EnemigoRango_spriteSheet_28
+  - first:
+      213: -601747015823060228
+    second: EnemigoRango_spriteSheet_29
+  - first:
+      213: -4371999395198567293
+    second: EnemigoRango_spriteSheet_30
+  - first:
+      213: 4212662003949806437
+    second: EnemigoRango_spriteSheet_31
+  - first:
+      213: 2344072892518819380
+    second: EnemigoRango_spriteSheet_32
+  - first:
+      213: -7373180376249197156
+    second: EnemigoRango_spriteSheet_33
+  - first:
+      213: 5999560695259551139
+    second: EnemigoRango_spriteSheet_34
+  - first:
+      213: 6998151172253856746
+    second: EnemigoRango_spriteSheet_35
+  - first:
+      213: -4211289858795685055
+    second: EnemigoRango_spriteSheet_36
+  - first:
+      213: 8415781167564520863
+    second: EnemigoRango_spriteSheet_37
+  - first:
+      213: 7540338626819930038
+    second: EnemigoRango_spriteSheet_38
+  - first:
+      213: 4611473323654846193
+    second: EnemigoRango_spriteSheet_39
+  - first:
+      213: -8231678033671955648
+    second: EnemigoRango_spriteSheet_40
+  - first:
+      213: -3408561395830985276
+    second: EnemigoRango_spriteSheet_41
+  - first:
+      213: 7500864741385934756
+    second: EnemigoRango_spriteSheet_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 4493
+        width: 426
+        height: 1236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0667c716697a750800000000000000
+      internalID: 6316182347854536875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 4493
+        width: 432
+        height: 1215
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9952dd22bfba37370800000000000000
+      internalID: 8319182031793497497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 4493
+        width: 474
+        height: 1153
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f1e5d6c0c4a4db0800000000000000
+      internalID: -4806946036006379659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 4493
+        width: 488
+        height: 1133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855144b4242dfb030800000000000000
+      internalID: 3512757416544703832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 5636
+        y: 4493
+        width: 693
+        height: 1174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33f8c1783519e260800000000000000
+      internalID: 7127251217461867326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 6460
+        y: 4493
+        width: 694
+        height: 1174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090bb85983aafc0a0800000000000000
+      internalID: -6859076547458125680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 7834
+        y: 4102
+        width: 494
+        height: 1399
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e588bdf11f68730f0800000000000000
+      internalID: -1137292010708039586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 8508
+        y: 4102
+        width: 452
+        height: 1448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a279ff86b683610800000000000000
+      internalID: 1601147766239079045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 9736
+        y: 4109
+        width: 570
+        height: 1263
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc93667e2cbcd0ce0800000000000000
+      internalID: -1437268668094989873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 11021
+        y: 3841
+        width: 515
+        height: 1709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2dc2b17a04c2ff0800000000000000
+      internalID: -59601608603020583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 11852
+        y: 3841
+        width: 591
+        height: 1641
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d859505df5f8f88c0800000000000000
+      internalID: -3994816702695762547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 12642
+        y: 3827
+        width: 639
+        height: 2019
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2161bbc4744fd2a0800000000000000
+      internalID: -6710569651334454995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 13425
+        y: 3827
+        width: 563
+        height: 1936
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074a450bbcc284a20800000000000000
+      internalID: 3046734401264460912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 3196
+        width: 1154
+        height: 1249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4734101ae2d8f90800000000000000
+      internalID: -6949847380916996940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 3196
+        width: 1161
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db8e6f7918f1bac0800000000000000
+      internalID: -3841016218774500394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 3278
+        width: 1250
+        height: 1133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f80edb28190dfb0800000000000000
+      internalID: -4625036826592112783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 3244
+        width: 1346
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ab458a58ba5a410800000000000000
+      internalID: 1487783842458942095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 5581
+        y: 3196
+        width: 755
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25ea30bd741f48a0800000000000000
+      internalID: -6318809222117399249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 3196
+        width: 755
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932ed6065f56c5f40800000000000000
+      internalID: 5718557731412894265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 9049
+        y: 4109
+        width: 584
+        height: 1229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9515b60d3bb5762e0800000000000000
+      internalID: -2132635070682672807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1473
+        width: 515
+        height: 1578
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05ea79db489a22f0800000000000000
+      internalID: -996816915970464497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1473
+        width: 528
+        height: 1565
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47036b28b0112740800000000000000
+      internalID: 5125396234112272207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 3074
+        y: 1596
+        width: 535
+        height: 1497
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256bba6d789a0ff10800000000000000
+      internalID: 2301525810473580114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 3664
+        y: 1596
+        width: 557
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35e22e8da5ed4650800000000000000
+      internalID: 6218879194045277503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 5746
+        y: 1473
+        width: 721
+        height: 1441
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdf0ca82fa34c300800000000000000
+      internalID: 271406690933472692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 1473
+        width: 728
+        height: 1441
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47936ac7bf7f1870800000000000000
+      internalID: 8655777436180649802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 7497
+        y: 1939
+        width: 1003
+        height: 1473
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2173df64a26a7f0800000000000000
+      internalID: -601747015823060228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 8555
+        y: 1939
+        width: 865
+        height: 1620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c77f2c6b98353c0800000000000000
+      internalID: -4371999395198567293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 9523
+        y: 1939
+        width: 1381
+        height: 1473
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563a630e5c1667a30800000000000000
+      internalID: 4212662003949806437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 10945
+        y: 1939
+        width: 1312
+        height: 1473
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436e43650e1d78020800000000000000
+      internalID: 2344072892518819380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 45
+        width: 1154
+        height: 1249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d19c833833da990800000000000000
+      internalID: -7373180376249197156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 45
+        width: 1161
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a557515aa8b24350800000000000000
+      internalID: 5999560695259551139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 127
+        width: 1250
+        height: 1133
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3bca2d96d6e1160800000000000000
+      internalID: 6998151172253856746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 4077
+        y: 93
+        width: 1346
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b37409f2e7e85c0800000000000000
+      internalID: -4211289858795685055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 5578
+        y: 148
+        width: 751
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9dfa18126cdac470800000000000000
+      internalID: 8415781167564520863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 148
+        width: 755
+        height: 1222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b732c9d70aa4a860800000000000000
+      internalID: 7540338626819930038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 7504
+        y: 100
+        width: 1003
+        height: 1469
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f613a32e8e3fff30800000000000000
+      internalID: 4611473323654846193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 8555
+        y: 100
+        width: 865
+        height: 1620
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bd891117433cd80800000000000000
+      internalID: -8231678033671955648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 9523
+        y: 100
+        width: 1381
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.74, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd6266487b52b0d0800000000000000
+      internalID: -3408561395830985276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemigoRango_spriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 10945
+        y: 100
+        width: 1312
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.74, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a79f82bdbc681860800000000000000
+      internalID: 7500864741385934756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5f35a8aa5dff24b4c872944f4f477d29
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

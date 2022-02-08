@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: 01a9d13760cec5a4bada27698297ae43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3053173152834700737
+    second: ComadrejoEscudoAttack_spriteSheet_0
+  - first:
+      213: -8926244349385328272
+    second: ComadrejoEscudoAttack_spriteSheet_1
+  - first:
+      213: 6686376681937726616
+    second: ComadrejoEscudoAttack_spriteSheet_2
+  - first:
+      213: 2204121385555973358
+    second: ComadrejoEscudoAttack_spriteSheet_3
+  - first:
+      213: -6837242086019056560
+    second: ComadrejoEscudoAttack_spriteSheet_4
+  - first:
+      213: 3134897784042223668
+    second: ComadrejoEscudoAttack_spriteSheet_5
+  - first:
+      213: 3607857952861332338
+    second: ComadrejoEscudoAttack_spriteSheet_6
+  - first:
+      213: 8911282787592428358
+    second: ComadrejoEscudoAttack_spriteSheet_7
+  - first:
+      213: -890190278384467269
+    second: ComadrejoEscudoAttack_spriteSheet_8
+  - first:
+      213: 6236802739982749249
+    second: ComadrejoEscudoAttack_spriteSheet_9
+  - first:
+      213: -2107726436396516842
+    second: ComadrejoEscudoAttack_spriteSheet_10
+  - first:
+      213: 5402738677578643597
+    second: ComadrejoEscudoAttack_spriteSheet_11
+  - first:
+      213: -8577957586787772410
+    second: ComadrejoEscudoAttack_spriteSheet_12
+  - first:
+      213: -5679455088601429502
+    second: ComadrejoEscudoAttack_spriteSheet_13
+  - first:
+      213: 9057254028521510425
+    second: ComadrejoEscudoAttack_spriteSheet_14
+  - first:
+      213: 671839542480846286
+    second: ComadrejoEscudoAttack_spriteSheet_15
+  - first:
+      213: 3368278113648916835
+    second: ComadrejoEscudoAttack_spriteSheet_16
+  - first:
+      213: -234872279230552590
+    second: ComadrejoEscudoAttack_spriteSheet_17
+  - first:
+      213: 3048593968437318626
+    second: ComadrejoEscudoAttack_spriteSheet_18
+  - first:
+      213: -4129456509191748060
+    second: ComadrejoEscudoAttack_spriteSheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 7684
+        width: 1010
+        height: 1050
+      alignment: 9
+      pivot: {x: 0.30286732, y: 0.05912714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5c87c5ecc0f5a20800000000000000
+      internalID: 3053173152834700737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 7429
+        width: 1376
+        height: 1317
+      alignment: 9
+      pivot: {x: 0.49638242, y: 0.22409663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079bc88be0c9f1480800000000000000
+      internalID: -8926244349385328272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 7246
+        width: 1687
+        height: 1660
+      alignment: 9
+      pivot: {x: 0.4940988, y: 0.2661127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c6a519a28cacc50800000000000000
+      internalID: 6686376681937726616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 4834
+        y: 7118
+        width: 1951
+        height: 1983
+      alignment: 9
+      pivot: {x: 0.5204102, y: 0.28412846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4d7e3e8bc969e10800000000000000
+      internalID: 2204121385555973358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 6997
+        y: 7636
+        width: 846
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.4882322, y: 0.062199842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cbb7b4c8c3d11a0800000000000000
+      internalID: -6837242086019056560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5426
+        width: 1049
+        height: 1133
+      alignment: 9
+      pivot: {x: 0.4715294, y: 0.082637616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438fef8dce4618b20800000000000000
+      internalID: 3134897784042223668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 5302
+        width: 1520
+        height: 1473
+      alignment: 9
+      pivot: {x: 0.37228522, y: 0.101251565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2732e5061bfa11230800000000000000
+      internalID: 3607857952861332338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3218
+        y: 5035
+        width: 1592
+        height: 1855
+      alignment: 9
+      pivot: {x: 0.35304806, y: 0.2236157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bdf773b7c3bab70800000000000000
+      internalID: 8911282787592428358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 5077
+        y: 4820
+        width: 1670
+        height: 2193
+      alignment: 9
+      pivot: {x: 0.35097012, y: 0.2911815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2436288a865a3f0800000000000000
+      internalID: -890190278384467269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 6905
+        y: 5351
+        width: 1215
+        height: 1166
+      alignment: 9
+      pivot: {x: 0.47132242, y: 0.06883593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ecada4c039d8650800000000000000
+      internalID: 6236802739982749249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 3102
+        width: 996
+        height: 1169
+      alignment: 9
+      pivot: {x: 0.49000475, y: 0.07420037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ab2ea29f9dfb2e0800000000000000
+      internalID: -2107726436396516842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2967
+        width: 1522
+        height: 1531
+      alignment: 9
+      pivot: {x: 0.6177356, y: 0.09685031}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88b65bc3326afa40800000000000000
+      internalID: 5402738677578643597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 2713
+        width: 1581
+        height: 1871
+      alignment: 9
+      pivot: {x: 0.6385289, y: 0.21799827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608d525d509f4f880800000000000000
+      internalID: -8577957586787772410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 5084
+        y: 2504
+        width: 1657
+        height: 2188
+      alignment: 9
+      pivot: {x: 0.64719516, y: 0.28387943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a802e10b58e21b0800000000000000
+      internalID: -5679455088601429502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 6882
+        y: 3039
+        width: 1236
+        height: 1150
+      alignment: 9
+      pivot: {x: 0.5322175, y: 0.07149393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91610823d84d1bd70800000000000000
+      internalID: 9057254028521510425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 7376
+        y: 207
+        width: 919
+        height: 1382
+      alignment: 9
+      pivot: {x: 0.3916733, y: 0.25148016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdb1ab118ad25900800000000000000
+      internalID: 671839542480846286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 5102
+        y: 188
+        width: 2031
+        height: 2110
+      alignment: 9
+      pivot: {x: 0.48774585, y: 0.16029657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36934c439178ebe20800000000000000
+      internalID: 3368278113648916835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 197
+        width: 1633
+        height: 1902
+      alignment: 9
+      pivot: {x: 0.44208544, y: 0.18072198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f560ec08e09dbcf0800000000000000
+      internalID: -234872279230552590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 193
+        width: 1363
+        height: 1692
+      alignment: 9
+      pivot: {x: 0.40870127, y: 0.21464112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3da19ef08ce4a20800000000000000
+      internalID: 3048593968437318626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEscudoAttack_spriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 183
+        width: 886
+        height: 1344
+      alignment: 9
+      pivot: {x: 0.67977774, y: 0.24075009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42683360f2931b6c0800000000000000
+      internalID: -4129456509191748060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 90241f3c803babf43ba96c7658898896
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

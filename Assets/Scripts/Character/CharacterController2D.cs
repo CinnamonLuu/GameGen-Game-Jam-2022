@@ -49,6 +49,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Start()
     {
+        
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         animator.SetBool("Backward",true);
         animator.SetBool("Forward",false);
@@ -62,6 +63,13 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("Attack",false);
+        animator.SetBool("Sword",false);
+        animator.SetBool("Shield",false);
+        animator.SetBool("Bow",false);
+
+         animator.SetBool("Damage",false);
+
         m_timeSienceLastDash += Time.deltaTime;
 
         Vector3 mousePos = Input.mousePosition;
@@ -200,13 +208,17 @@ public class CharacterController2D : MonoBehaviour
         Debug.Log("ataco");
         if (m_weapon != null)
         {
+            animator.SetBool("Attack",true);
             m_weapon.Attack();
+            
+            animator.SetBool("Sword",true);
         }
     }
 
     public void GetDamage(float amount)
     {
         health.amount -= amount;
+        animator.SetBool("Damage",true);
         if (health.amount <= 0)
         {
             Die();

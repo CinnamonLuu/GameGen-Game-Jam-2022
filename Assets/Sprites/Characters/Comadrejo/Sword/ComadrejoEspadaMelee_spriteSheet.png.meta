@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: 48db6f86b8ae5af48a5acfc179c6b7d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2266988293978212637
+    second: ComadrejoEspadaMelee_spriteSheet_0
+  - first:
+      213: -4089765561974868843
+    second: ComadrejoEspadaMelee_spriteSheet_1
+  - first:
+      213: 5689082896650162497
+    second: ComadrejoEspadaMelee_spriteSheet_3
+  - first:
+      213: -7202587226824804761
+    second: ComadrejoEspadaMelee_spriteSheet_5
+  - first:
+      213: -5229501571312554826
+    second: ComadrejoEspadaMelee_spriteSheet_29
+  - first:
+      213: 4107910071969117316
+    second: ComadrejoEspadaMelee_spriteSheet_30
+  - first:
+      213: -20286361550802529
+    second: ComadrejoEspadaMelee_spriteSheet_31
+  - first:
+      213: -4352047269088219156
+    second: ComadrejoEspadaMelee_spriteSheet_33
+  - first:
+      213: 6821700621701425609
+    second: ComadrejoEspadaMelee_spriteSheet_54
+  - first:
+      213: 4018128061996508977
+    second: ComadrejoEspadaMelee_spriteSheet_56
+  - first:
+      213: 2595615948259243001
+    second: ComadrejoEspadaMelee_spriteSheet_59
+  - first:
+      213: 8895326010950592064
+    second: ComadrejoEspadaMelee_spriteSheet_61
+  - first:
+      213: -2147271508254923512
+    second: ComadrejoEspadaMelee_spriteSheet_62
+  - first:
+      213: -3755962241170061459
+    second: ComadrejoEspadaMelee_spriteSheet_2
+  - first:
+      213: 3625488305413466448
+    second: ComadrejoEspadaMelee_spriteSheet_4
+  - first:
+      213: 7373949505718409714
+    second: ComadrejoEspadaMelee_spriteSheet_6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 5621
+        width: 1323
+        height: 1023
+      alignment: 9
+      pivot: {x: 0.23007679, y: 0.05905769}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d194a84a7d5f57f10800000000000000
+      internalID: 2266988293978212637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 4717
+        width: 2479
+        height: 1835
+      alignment: 9
+      pivot: {x: 0.57278514, y: 0.5348252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594bcdfc3eb3e37c0800000000000000
+      internalID: -4089765561974868843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 4584
+        width: 1947
+        height: 2005
+      alignment: 9
+      pivot: {x: 0.648663, y: 0.5524957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1415590a0cea3fe40800000000000000
+      internalID: 5689082896650162497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 6571
+        y: 4600
+        width: 1658
+        height: 1986
+      alignment: 9
+      pivot: {x: 0.7409615, y: 0.5520826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766775104154b0c90800000000000000
+      internalID: -7202587226824804761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 3418
+        width: 1016
+        height: 1088
+      alignment: 9
+      pivot: {x: 0.5863148, y: 0.050927553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc619927041d67b0800000000000000
+      internalID: -5229501571312554826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 3044
+        width: 2078
+        height: 1473
+      alignment: 9
+      pivot: {x: 0.282202, y: 0.27036327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484f7f0227a320930800000000000000
+      internalID: 4107910071969117316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 4118
+        y: 3066
+        width: 2235
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.24840823, y: 0.25268173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91baf169ade7bff0800000000000000
+      internalID: -20286361550802529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 6515
+        y: 3072
+        width: 2386
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.23221846, y: 0.2526814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefa940211c6a93c0800000000000000
+      internalID: -4352047269088219156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 4378
+        y: 433
+        width: 1459
+        height: 2399
+      alignment: 9
+      pivot: {x: 0.26936424, y: 0.13854542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c92390929c8bae50800000000000000
+      internalID: 6821700621701425609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 6157
+        y: 437
+        width: 1370
+        height: 2442
+      alignment: 9
+      pivot: {x: 0.23076421, y: 0.13166048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137a455fe2243c730800000000000000
+      internalID: 4018128061996508977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 433
+        width: 2186
+        height: 2285
+      alignment: 9
+      pivot: {x: 0.44967577, y: 0.14316812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3b459e3fa750420800000000000000
+      internalID: 2595615948259243001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 414
+        width: 1060
+        height: 1305
+      alignment: 9
+      pivot: {x: 0.73808837, y: 0.23222952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805e522a0fb5332e0800000000000000
+      internalID: -2147271508254923512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 6574
+        y: 5568
+        width: 1657
+        height: 1020
+      alignment: 9
+      pivot: {x: 0.74, y: 0.12409764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d674749dd3420ebc0800000000000000
+      internalID: -3755962241170061459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 6511
+        y: 3064
+        width: 1186
+        height: 1467
+      alignment: 9
+      pivot: {x: 0.47359204, y: 0.24807434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059a085b762505230800000000000000
+      internalID: 3625488305413466448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComadrejoEspadaMelee_spriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 431
+        width: 1363
+        height: 1480
+      alignment: 9
+      pivot: {x: 0.23056719, y: 0.21142302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f95300b108855660800000000000000
+      internalID: 7373949505718409714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 198d4a0d6de127f4ea6c975b32f39888
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
