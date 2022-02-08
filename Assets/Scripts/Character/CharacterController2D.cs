@@ -44,6 +44,7 @@ public class CharacterController2D : MonoBehaviour
 
     
     public Animator animator;
+    public ParticleSystem dust;
 
 
 
@@ -169,6 +170,7 @@ public class CharacterController2D : MonoBehaviour
                 m_timeSienceLastDash = 0;
                 Debug.Log("dash");
                 animator.SetBool("Dash",true);
+                CreateDust();
             }
             else
             {
@@ -193,6 +195,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 inDash = false;
                 animator.SetBool("Dash",false);
+                
             }
         }
 
@@ -233,5 +236,9 @@ public class CharacterController2D : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, 8);
+    }
+
+    void CreateDust(){
+        dust.Play();
     }
 }
