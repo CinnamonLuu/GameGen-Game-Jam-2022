@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class CharacterController2D : MonoBehaviour
 {
-    [Header("Stats")]
+    /*[Header("Stats")]
     [SerializeField]
     private Stat health;
 
@@ -19,7 +19,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField]
     private SpriteRenderer m_spriteRenderer;
     [SerializeField]
-    private Sprite[] characterSprites;
+    private Sprite[] characterSprites;*/
 
     [Header("Movement variables")]
     [SerializeField]
@@ -36,9 +36,12 @@ public class CharacterController2D : MonoBehaviour
     private Vector3 goalPosition;
 
     private float m_dashVelocity => m_characterVelocity * m_DashMultiplier;
-    public float Health => health.amount;
+    //public float Health => health.amount;
+
+    [Header("Components")]
     public Rigidbody2D Body;
     public Localization localization;
+    public CombatConfiguration combatConfiguration;
 
     public Vector3 characterForward;
 
@@ -50,14 +53,15 @@ public class CharacterController2D : MonoBehaviour
     void Start()
     {
         
-        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        //m_spriteRenderer = GetComponent<SpriteRenderer>();
         animator.SetBool("Backward",true);
         animator.SetBool("Forward",false);
         animator.SetBool("Left",false);
         animator.SetBool("Right",false);
-        m_spriteRenderer.sprite = characterSprites[0];
+        /*m_spriteRenderer.sprite = characterSprites[0];
         m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
         m_weapon.SetCharacter(this);
+*/
         characterForward = transform.up;
     }
 
@@ -83,8 +87,8 @@ public class CharacterController2D : MonoBehaviour
             animator.SetBool("Forward",false);
             animator.SetBool("Left",false);
             animator.SetBool("Right",false);
-            m_spriteRenderer.sprite = characterSprites[0];
-            characterForward = transform.up;
+            //m_spriteRenderer.sprite = characterSprites[0];
+            combatConfiguration.characterForward = transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
@@ -93,8 +97,8 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Forward",false);
                     animator.SetBool("Left",false);
                     animator.SetBool("Right",true);
-                    m_spriteRenderer.sprite = characterSprites[3];
-                    characterForward = transform.right;
+                    //m_spriteRenderer.sprite = characterSprites[3];
+                    combatConfiguration.characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
@@ -102,8 +106,8 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Forward",false);
                     animator.SetBool("Left",true);
                     animator.SetBool("Right",false);
-                    m_spriteRenderer.sprite = characterSprites[2];
-                    characterForward = -transform.right;
+                    //m_spriteRenderer.sprite = characterSprites[2];
+                    combatConfiguration.characterForward = -transform.right;
                 }
             }
         }
@@ -113,8 +117,8 @@ public class CharacterController2D : MonoBehaviour
             animator.SetBool("Forward",true);
             animator.SetBool("Left",false);
             animator.SetBool("Right",false);
-            m_spriteRenderer.sprite = characterSprites[1];
-            characterForward = -transform.up;
+            //m_spriteRenderer.sprite = characterSprites[1];
+            combatConfiguration.characterForward = -transform.up;
             if (Mathf.Abs(mousePos.x) > Mathf.Abs(mousePos.y))
             {
                 if (mousePos.x > 0.1)
@@ -123,8 +127,8 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Forward",false);
                     animator.SetBool("Left",false);
                     animator.SetBool("Right",true);
-                    m_spriteRenderer.sprite = characterSprites[3];
-                    characterForward = transform.right;
+                    //m_spriteRenderer.sprite = characterSprites[3];
+                    combatConfiguration.characterForward = transform.right;
                 }
                 else if (mousePos.x <= -0.1)
                 {
@@ -132,8 +136,8 @@ public class CharacterController2D : MonoBehaviour
                     animator.SetBool("Forward",false);
                     animator.SetBool("Left",true);
                     animator.SetBool("Right",false);
-                    m_spriteRenderer.sprite = characterSprites[2];
-                    characterForward = -transform.right;
+                    //m_spriteRenderer.sprite = characterSprites[2];
+                    combatConfiguration.characterForward = -transform.right;
                 }
             }
         }
@@ -195,10 +199,16 @@ public class CharacterController2D : MonoBehaviour
                 animator.SetBool("Dash",false);
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.F))
+        combatConfiguration.Elapsed += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Attack();
+            Debug.Log(combatConfiguration.Elapsed);
+            Debug.Log(combatConfiguration.Elapsed >= 1 / combatConfiguration.attackSpeed.amount);
+            if (combatConfiguration.Elapsed > 1/combatConfiguration.attackSpeed.amount)
+            {
+                Attack();
+                combatConfiguration.Elapsed = 0;
+            }
         }
 
     }
@@ -206,16 +216,16 @@ public class CharacterController2D : MonoBehaviour
     public void Attack()
     {
         Debug.Log("ataco");
-        if (m_weapon != null)
+        if (combatConfiguration.Weapon != null)
         {
             animator.SetBool("Attack",true);
-            m_weapon.Attack();
+            combatConfiguration.Weapon.Attack();
             
             animator.SetBool("Sword",true);
         }
     }
 
-    public void GetDamage(float amount)
+    /*public void GetDamage(float amount)
     {
         health.amount -= amount;
         animator.SetBool("Damage",true);
@@ -223,7 +233,7 @@ public class CharacterController2D : MonoBehaviour
         {
             Die();
         }
-    }
+    }*/
 
     public void Die()
     {
