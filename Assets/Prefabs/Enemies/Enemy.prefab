@@ -195,8 +195,8 @@ MonoBehaviour:
     type: 5
     amount: 1
   attackSpeed:
-    type: 0
-    amount: 0.7
+    type: 2
+    amount: 2
   m_weaponConfiguration: {fileID: 11400000, guid: e60fbb698bf57d54a89e2f5a87f5cf5c, type: 2}
   animator: {fileID: 1008116165}
   characterForward: {x: 0, y: 0}

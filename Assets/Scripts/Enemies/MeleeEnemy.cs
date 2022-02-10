@@ -5,12 +5,12 @@ using UnityEngine;
 public class MeleeEnemy : Enemy
 {
 
+private bool movementAllowed = true;
 
     // Update is called once per frame
     private void Update()
     {
-        combatConfiguration.animator.SetBool("Attack",false);
-        //combatConfiguration.animator.SetBool("Damage",false);
+        
 
         combatConfiguration.Elapsed += Time.deltaTime;
         if (localization.room != player.localization.room)
@@ -42,17 +42,17 @@ public class MeleeEnemy : Enemy
             //Attack
 /*            Debug.Log("Player in range:" + combatConfiguration.Elapsed);
             Debug.Log(combatConfiguration.Elapsed >= 1 / combatConfiguration.attackSpeed.amount);*/
-            if (combatConfiguration.Elapsed >= 1/combatConfiguration.attackSpeed.amount)
+            if (combatConfiguration.Elapsed >= 1/combatConfiguration.attackSpeed.amount && movementAllowed)
             {
-                Debug.Log("Attack player");
-                combatConfiguration.Weapon.Attack();
-                combatConfiguration.Elapsed = 0;
-                combatConfiguration.animator.SetBool("Attack", true);
+                Attack();
             }
             return;
         }
-
-        _body.velocity = direction * moveSpeed.amount ;
+        if(movementAllowed)
+        {
+            _body.velocity = direction * moveSpeed.amount ;
+        }
+        
 
         if(_body.velocity[0] != 0 || _body.velocity[1] != 0){
 
@@ -104,5 +104,38 @@ public class MeleeEnemy : Enemy
             combatConfiguration.animator.SetBool("Quieto",true);
         }
         
+    }
+
+    void Attack() //Arranca las animaciones de atacar
+    {
+        combatConfiguration.animator.SetTrigger("Attack");
+        
+    }
+
+    void AnimAttack() //Se lanza a traves de la animacion de ataque para ejecutarse en el frame correcto
+    {               
+        Debug.Log("Attack player");
+        combatConfiguration.Weapon.Attack();
+        combatConfiguration.Elapsed = 0;
+                
+    }
+
+    void DisableMovement()
+    {
+        _body.velocity = new Vector2 (0,0);
+        movementAllowed = false;
+    }
+
+     void AllowMovement()
+    {
+        movementAllowed = true;
+    }
+
+
+    public void Die()
+    {
+         GetComponent<CircleCollider2D>().enabled = false;
+        _body.velocity = new Vector2 (0,0);
+        this.enabled = false;
     }
 }

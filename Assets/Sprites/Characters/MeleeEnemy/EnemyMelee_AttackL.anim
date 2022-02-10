@@ -21,7 +21,7 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -2660050718316929487, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
-    - time: 0.05
+    - time: 0.06666667
       value: {fileID: 8903360098992777303, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
     - time: 0.33333334
       value: {fileID: -1122982193496751387, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
@@ -77,4 +77,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: DisableMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: AnimAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5833333
+    functionName: AllowMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

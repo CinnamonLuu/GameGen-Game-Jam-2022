@@ -23,7 +23,7 @@ AnimationClip:
       value: {fileID: -4785111317494980277, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
     - time: 0.06666667
       value: {fileID: 8033366846498322796, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
-    - time: 0.16666667
+    - time: 0.41666666
       value: {fileID: -4785111317494980277, guid: 8a51c92a2426c75438688f8bd19dd9a7, type: 3}
     attribute: m_Sprite
     path: 
@@ -52,7 +52,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.18333334
+    m_StopTime: 0.43333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -71,4 +71,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: DisableMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.41666666
+    functionName: AllowMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

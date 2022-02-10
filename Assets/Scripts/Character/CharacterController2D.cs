@@ -49,6 +49,8 @@ public class CharacterController2D : MonoBehaviour
     public Animator animator;
     public ParticleSystem dust;
 
+    private bool movementAllowed = true;
+
 
 
     void Start()
@@ -59,6 +61,7 @@ public class CharacterController2D : MonoBehaviour
         animator.SetBool("Forward",false);
         animator.SetBool("Left",false);
         animator.SetBool("Right",false);
+        animator.SetBool("AttackReset",false);
         /*m_spriteRenderer.sprite = characterSprites[0];
         m_weapon = m_weaponConfiguration.InstantiateWeaponBehaviour();
         m_weapon.SetCharacter(this);
@@ -68,12 +71,9 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("Attack",false);
-        animator.SetBool("Sword",false);
+        /*animator.SetBool("Sword",false);
         animator.SetBool("Shield",false);
-        animator.SetBool("Bow",false);
-
-         animator.SetBool("Damage",false);
+        animator.SetBool("Bow",false);*/
 
         m_timeSienceLastDash += Time.deltaTime;
 
@@ -166,7 +166,7 @@ public class CharacterController2D : MonoBehaviour
 
             vectorToAdd.Normalize();
 
-            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown)
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && m_timeSienceLastDash >= m_dashCooldown && Body.velocity != Vector2.zero)
             {
                 inDash = true;
                 Body.velocity = vectorToAdd * m_dashVelocity;
@@ -176,7 +176,7 @@ public class CharacterController2D : MonoBehaviour
                 animator.SetBool("Dash",true);
                 CreateDust();
             }
-            else
+            else if(movementAllowed)
             {
 
                 vectorToAdd *= m_characterVelocity;
@@ -209,29 +209,49 @@ public class CharacterController2D : MonoBehaviour
             Debug.Log(combatConfiguration.Elapsed >= 1 / combatConfiguration.attackSpeed.amount);
             if (combatConfiguration.Elapsed > 1/combatConfiguration.attackSpeed.amount)
             {
+                
                 Attack();
                 combatConfiguration.Elapsed = 0;
+            }else{
+                animator.SetBool("AttackReset",false);
             }
         }
 
     }
 
-    public void Attack()
+    public void Attack() //Arranca las animaciones de atacar
     {
         Debug.Log("ataco");
         if (combatConfiguration.Weapon != null)
         {
-            animator.SetBool("Attack",true);
-            combatConfiguration.Weapon.Attack();
+            animator.SetBool("AttackReset",true);
+            animator.SetBool("Sword",true); //Cambiar esta linea cuando se sepa como acceder a las armas equipadas
+            animator.SetTrigger("Attack");
             
-            animator.SetBool("Sword",true);
         }
+    }
+
+    void AnimAttack() //Se lanza a traves de la animacion de ataque para ejecutarse en el frame correcto
+    {
+        combatConfiguration.Weapon.Attack();
+        
+    }
+
+    void DisableMovement()
+    {
+        Body.velocity = new Vector2 (0,0);
+        movementAllowed = false;
+    }
+
+     void AllowMovement()
+    {
+        movementAllowed = true;
     }
 
     /*public void GetDamage(float amount)
     {
         health.amount -= amount;
-        animator.SetBool("Damage",true);
+        animator.SetTrigger("Damage");
         if (health.amount <= 0)
         {
             Die();
@@ -241,6 +261,9 @@ public class CharacterController2D : MonoBehaviour
     public void Die()
     {
         //finish game
+         GetComponent<CircleCollider2D>().enabled = false;
+        Body.velocity = new Vector2 (0,0);
+        this.enabled = false;
     }
 
     private void OnDrawGizmos()

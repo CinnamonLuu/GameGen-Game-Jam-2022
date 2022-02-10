@@ -54,7 +54,7 @@ public class CombatConfiguration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("Damage", false);
+        
     }
 
 
@@ -62,7 +62,7 @@ public class CombatConfiguration : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         health.amount -= damageAmount;
-        animator.SetBool("Damage", true);
+        animator.SetTrigger("Damage");
 
         if (health.amount <= 0)
         {
@@ -74,10 +74,22 @@ public class CombatConfiguration : MonoBehaviour
 
     public void Die()
     {
-        animator.SetBool("Death", true);
+        animator.SetTrigger("Death");
         
         //drop object random
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        this.enabled = false;
+        Debug.Log("------------> " +gameObject.name, gameObject);
+        if(gameObject.name == "Enemy"){
+            GetComponent<MeleeEnemy>().Die();
+        }
+        if(gameObject.name == "Player"){
+            GetComponent<CharacterController2D>().Die();
+        }
+        
+
+
+
     }
 
 }
